@@ -67,6 +67,6 @@ public extension View {
     ///   - url: The URL to write the output to
     @MainActor
     func render(size: CGSize, to url: URL) throws {
-        try [self].render(size: size, to: url)
+        try PDFRenderer.render([self], size: size, to: url)
     }
 }
